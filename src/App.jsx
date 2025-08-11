@@ -7,6 +7,7 @@ import { EditPanelV2 } from './components/EditPanelV2';
 import { ExportButton } from './components/ExportButton';
 import { Shield, Zap, Clock, TrendingUp, DollarSign, Home, Camera, Users } from 'lucide-react';
 import { HouseIcon } from './components/HouseIcon';
+import { Analytics } from '@vercel/analytics/react';
 
 function AppContent() {
   const { photos } = usePhotoContext();
@@ -219,6 +220,7 @@ function App() {
   return (
     <PhotoProvider>
       <AppContent />
+      <Analytics />
     </PhotoProvider>
   );
 }
