@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "PropertyPhoto Pro - Real Estate Photos, Perfected",
+  "short_name": "PropertyPhoto Pro",
+  "version": "1.0.0",
+  "description": "Professional photo editor for real estate agents. Transform property photos in seconds. Smart enhancement, MLS-ready exports, 100% private.",
+  
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "PropertyPhoto Pro - Real Estate Photos, Perfected"
+  },
+  
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  
+  "host_permissions": [],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["*.jpg", "*.png", "*.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
+  "offline_enabled": true,
+  
+  "author": "Your Name",
+  "homepage_url": "https://your-website.com"
+}
